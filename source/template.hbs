@@ -1,0 +1,293 @@
+<html>
+    <head>
+        <title>Depleted Earth</title>
+        <style>
+            html, body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                margin: 0px;
+                padding: 0px
+            }
+
+            header {
+                position: relative;
+                overflow: auto;
+            }
+
+            .title {
+                text-align: center;
+                color: white;
+                font-size: 64px;
+                margin-top: 128px;
+                margin-bottom: 0px;
+                text-shadow: 0px 0px 30px rgb(0,0,0,1);
+            }
+
+            header .description {
+                text-align: center;
+                color: white;
+                padding-top: 16px;
+                padding-bottom: 24px;
+                margin-top: 0px;
+                margin-bottom: 80px;
+                max-width: 460px;
+                text-shadow: 0px 0px 15px rgb(0,0,0,1);
+            }
+
+            header .container {
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                z-index: -1;
+                background-color: black;
+            }
+
+            header img {
+                height: 120%;
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+            }
+
+            header .detail {
+                color: #444;
+                margin-left: 8px;
+                margin-bottom: 8px;
+            }
+
+            header .detail a {
+                color: #444;
+            }
+
+            header .detail a:hover {
+                color: rgb(255, 255, 255);
+            }
+
+            .imageContainer {
+                height: 600px;
+                overflow: hidden;
+                background-color: blueviolet;
+            }
+
+            .content {
+                max-width: 1200px;
+                margin: auto;
+            }
+
+            .text {
+                font-size: 18px;
+                line-height: 1.4em;
+                max-width: 664px;
+                margin: auto;
+                margin-top:16px;
+                margin-bottom:16px;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .banner {
+                /* min-height: 400px; */
+                overflow:auto;
+                position: relative;
+            }
+
+            .banner .background-image {
+                background-position: center;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                bottom: 0px;
+                right: 0px;
+                z-index: -1;
+
+                transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+                transition-duration: 1s;
+
+                border-radius: 8px;
+            }
+
+            @media screen and (max-width: 1200px) {
+                .banner .background-image {
+                    border-radius: 0px;
+                }
+            }
+
+            .banner h2 {
+                text-align: center;
+                color: white;
+                font-weight: normal;
+                font-size: 160px;
+                text-shadow: 0px 0px 30px rgb(0,0,0,1);
+                margin-top: 48px;
+                margin-bottom: 16px;
+            }
+
+            .detail {
+                font-weight: light;
+                color: #CCC;
+                font-size: 8px;
+            }
+
+            .resource .hanging {
+                margin: auto;
+                position: relative;
+                top: 8px;
+                height: 0px;
+                padding-left: 8px;
+                padding-right: 8px;
+                overflow: visible;
+            }
+
+            .resource .attribution {
+                text-align: end;
+            }
+
+            .detail a {
+                color: #CCC;
+                transition-property: color;
+                transition-duration: 0.5s;
+            }
+
+            .detail a:hover {
+                color: rgb(0, 0, 0);
+            }
+
+            .banner .description {
+                text-align: center;
+                font-weight: bold;
+                color: white;
+                font-size: 60px;
+                text-shadow: 0px 0px 15px rgb(0,0,0,1);
+            }
+
+            .greyed-out .background-image {
+                filter: grayscale() brightness(0.5);
+            }
+
+            .year {
+                display: block;
+                font-size: 48px;
+                font-weight: bolder;
+                text-align: center;
+                margin: auto;
+                margin-bottom: 0px;
+                margin-top: 0px;
+                width: 140px;
+                border: 4px solid black;
+                border-radius: 8px;
+            }
+
+            .bulb {
+                margin: auto;
+                height: 16px;
+                width: 16px;
+                border-radius: 32px;
+                background-color: black;
+            }
+
+            .bulb.top {
+                margin-top: 64px;
+            }
+
+            .bulb.dot {
+                margin-bottom: 16px;
+            }
+
+            .bulb.bottom {
+                margin-bottom: 256px;
+            }
+
+            .separator {
+                width: 2px;
+                height: 64px;
+                background-color: black;
+                margin: auto;
+            }
+
+            .spacer {
+                height: 32px;
+            }
+
+        </style>
+        <script>
+            var elements = document.getElementsByClassName("resource");
+            window.addEventListener("scroll", function() {
+                // console.log(window.scrollY > (element.offsetTop + element.offsetHeight))
+                for (element of elements) {
+                    console.log(element)
+                    if (window.scrollY > (element.offsetTop + element.offsetHeight) - (window.innerHeight / 2) - 64) {
+                        if (element.classList && !element.classList.contains("greyed-out")) {
+                            element.classList.toggle("greyed-out")
+                        }
+                    } else {
+                        if (element.classList && element.classList.contains("greyed-out")) {
+                            element.classList.toggle("greyed-out")
+                        }
+                    }
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/2014-_Warmest_Year_On_Record_%2816292052951%29.jpg"/>
+            </div>
+            <h1 class="title">
+                {{title}}
+            </h1>
+            <p class="description text">
+                {{overview}}
+            </p>
+            <p class="detail"><a href="https://commons.wikimedia.org/wiki/File:2014-_Warmest_Year_On_Record_(16292052951).jpg">Image source</a></p>
+        </header>
+        <div class="content">
+            <div class="bulb top"></div>
+            <div class="separator"></div>
+            {{#each timeline}}
+                {{#if isResource}}
+                    <div class="resource" id="{{id}}">
+                        <div class="banner">
+                            <div class="background-image" style="background-image: url({{imageURL}});"></div>
+                            {{#if description}}
+                                <p class="description">
+                                    {{description}}
+                                </p>
+                            {{/if}}
+                        </div>
+                        {{#if source}}
+                            <p class="source detail hanging">
+                                <a href="{{source}}">Source</a>
+                            </p>
+                        {{/if}}
+                        {{#if attribution}}
+                            <p class="attribution detail hanging">
+                                {{{attribution}}}
+                            </p>
+                        {{/if}}
+                    </div>
+                {{/if}}
+                {{#if isYear}}
+                    <p class="year">{{year}}</p>
+                {{/if}}
+                {{#if isSeparator}}
+                    <div class="separator"></div>
+                    {{!-- <div class="bulb"></div> --}}
+                {{/if}}
+                {{#if isSpacer}}
+                    <div class="spacer"></div>
+                    {{!-- <div class="bulb"></div> --}}
+                {{/if}}
+                {{#if isParagraph}}
+                    <p class="text">
+                        {{{text}}}
+                    </p>
+                {{/if}}
+            {{/each}}
+            <div class="bulb dot"></div>
+            <div class="bulb dot"></div>
+            <div class="bulb bottom"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+{
+    "title": "Depleted Earth",
+    "overview": "A timeline of the projected consequences from our current resource use practices.",
+    "contents": [
+        {
+            "type": "resource",
+            "year":"2040",
+            "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stibnite.jpg/1280px-Stibnite.jpg",
+            "attribution": "<a href=\"https://commons.wikimedia.org/wiki/File:Stibnite.jpg\">User:pepperedjane</a>, Public domain, via Wikimedia Commons",
+            "description": "Antimony resources are exhausted."
+        },
+        {
+            "type": "resource",
+            "year":"2080",
+            "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/1000g-Goldbarren-Umicore.jpg/1280px-1000g-Goldbarren-Umicore.jpg",
+            "attribution": "<a href=\"https://commons.wikimedia.org/wiki/File:1000g-Goldbarren-Umicore.jpg\">Umicore AG &amp; Co. KG</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons",
+            "description": "Gold resources are depleted.",
+            "source": "https://example.com"
+        },
+        {
+            "type": "paragraph",
+            "year":"2080",
+            "text": "Gold is a chemical element with the symbol Au and atomic number 79, making it one of the higher atomic number elements that occur naturally. In a pure form, it is a bright, slightly reddish yellow, dense, soft, malleable, and ductile metal. Chemically, gold is a transition metal and a group 11 "
+        },
+        {
+            "type": "resource",
+            "year":"2100",
+            "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Coral_Outcrop_Flynn_Reef.jpg/1280px-Coral_Outcrop_Flynn_Reef.jpg",
+            "attribution": "<a href=\"https://commons.wikimedia.org/wiki/File:Coral_Outcrop_Flynn_Reef.jpg\">Toby Hudson</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>, via Wikimedia Commons",
+            "description": "90% of Coral Reefs are gone."
+        }
+    ]
+}
