@@ -1,7 +1,7 @@
 {
     "title": "Depleted Earth",
     "overview": "A timeline of the projected consequences from our current resource use practices.",
-    "contents": [
+    "events": [
         {
             "type": "resource",
             "year":"2040",

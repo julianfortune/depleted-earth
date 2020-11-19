@@ -1,0 +1,3 @@
+#! /bin/zsh
+
+node source/build.js
