@@ -1,1 +1,1 @@
-# depleted-earth
+# Depleted Earth
