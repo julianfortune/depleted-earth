@@ -90,39 +90,44 @@
 
             .banner {
                 /* min-height: 400px; */
-                overflow:auto;
+                overflow: hidden;
                 position: relative;
+                border-radius: 10px;
+                -webkit-mask-image: -webkit-radial-gradient(white, black);
+            }
+
+            .banner .image {
+                background-position: center;
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                bottom: -5px;
+                right: -5px;
+                z-index: -1;
+
+                filter: blur(3px) brightness(0.8);
             }
 
             .banner .background-image {
-                background-position: center;
                 position: absolute;
                 top: 0px;
                 left: 0px;
                 bottom: 0px;
                 right: 0px;
                 z-index: -1;
+                overflow: hidden;
 
                 transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
                 transition-duration: 1s;
-
-                border-radius: 8px;
             }
 
             @media screen and (max-width: 1200px) {
                 .banner .background-image {
                     border-radius: 0px;
                 }
-            }
-
-            .banner h2 {
-                text-align: center;
-                color: white;
-                font-weight: normal;
-                font-size: 160px;
-                text-shadow: 0px 0px 30px rgb(0,0,0,1);
-                margin-top: 48px;
-                margin-bottom: 16px;
+                .banner {
+                    border-radius: 0px;
+                }
             }
 
             .detail {
@@ -168,11 +173,11 @@
                 font-weight: bold;
                 color: white;
                 font-size: 60px;
-                text-shadow: 0px 0px 15px rgb(0,0,0,1);
+                text-shadow: 0px 0px 30px black;
             }
 
             .greyed-out .background-image {
-                filter: grayscale() brightness(0.5);
+                filter: grayscale() brightness(0.8);
             }
 
             .year {
@@ -259,7 +264,9 @@
                 {{#if isResource}}
                     <div class="resource" id="{{id}}">
                         <div class="banner">
-                            <div class="background-image" style="background-image: url({{imageURL}});"></div>
+                            <div class="background-image">
+                                <div class="image" style="background-image: url({{imageURL}});"></div>
+                            </div>
                             {{#if description}}
                                 <p class="description">
                                     {{description}}
