@@ -5,8 +5,8 @@
         {
             "type": "resource",
             "year":"2040",
-            "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stibnite.jpg/1280px-Stibnite.jpg",
-            "attribution": "<a href=\"https://commons.wikimedia.org/wiki/File:Stibnite.jpg\">User:pepperedjane</a>, Public domain, via Wikimedia Commons",
+            "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/01_-_Set_of_Energizer_Batteries.jpg/1280px-01_-_Set_of_Energizer_Batteries.jpg",
+            "attribution": "<a href=\"https://commons.wikimedia.org/wiki/File:01_-_Set_of_Energizer_Batteries.jpg\">Asim18</a>, <a href=\"https://creativecommons.org/licenses/by/3.0\">CC BY 3.0</a>, via Wikimedia Commons",
             "description": "Antimony resources are exhausted."
         },
         {
@@ -16,6 +16,26 @@
             "attribution": "<a href=\"https://commons.wikimedia.org/wiki/File:1000g-Goldbarren-Umicore.jpg\">Umicore AG &amp; Co. KG</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons",
             "description": "Gold resources are depleted.",
             "source": "https://example.com"
+        },
+        {
+            "type": "header",
+            "year":"2080",
+            "text": "About gold"
+        },
+        {
+            "type": "paragraph",
+            "year":"2080",
+            "text": "Gold is a chemical element with the symbol Au and atomic number 79, making it one of the higher atomic number elements that occur naturally. In a pure form, it is a bright, slightly reddish yellow, dense, soft, malleable, and ductile metal. Chemically, gold is a transition metal and a group 11 "
+        },
+        {
+            "type": "paragraph",
+            "year":"2080",
+            "text": "Gold is a chemical element with the symbol Au and atomic number 79, making it one of the higher atomic number elements that occur naturally. In a pure form, it is a bright, slightly reddish yellow, dense, soft, malleable, and ductile metal. Chemically, gold is a transition metal and a group 11 "
+        },
+        {
+            "type": "header",
+            "year":"2080",
+            "text": "Why is gold important?"
         },
         {
             "type": "paragraph",
@@ -28,6 +48,22 @@
             "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Coral_Outcrop_Flynn_Reef.jpg/1280px-Coral_Outcrop_Flynn_Reef.jpg",
             "attribution": "<a href=\"https://commons.wikimedia.org/wiki/File:Coral_Outcrop_Flynn_Reef.jpg\">Toby Hudson</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>, via Wikimedia Commons",
             "description": "90% of Coral Reefs are gone."
+        },
+        {
+            "type": "header",
+            "text": "What can we do?"
+        },
+        {
+            "type": "paragraph",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "type": "header",
+            "text": "Why is gold important?"
+        },
+        {
+            "type": "paragraph",
+            "text": "Gold is a chemical element with the symbol Au and atomic number 79, making it one of the higher atomic number elements that occur naturally. In a pure form, it is a bright, slightly reddish yellow, dense, soft, malleable, and ductile metal. Chemically, gold is a transition metal and a group 11 "
         }
     ]
 }

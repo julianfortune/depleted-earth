@@ -4,10 +4,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <style>
+            :root {
+                --content-width: 1000px;
+                --text-width: 664px;
+                --gutter: 16px;
+                /* (--text-width) + 2 * (--gutter) */
+                --text-width-and-gutter: 696px;
+                --banner-border-rad: 12px;
+            }
+
+
             html, body {
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 margin: 0px;
                 padding: 0px
+            }
+
+            footer {
+                font-size: 12px;
+                text-align: center;
+                margin-top: 256px;
+                margin-bottom: 32px;
+                color: #444;
+
+            }
+
+            footer a {
+                color: #444;
+            }
+
+            footer a:hover {
+                color: rgb(0, 0, 0);
             }
 
             header {
@@ -15,13 +42,13 @@
                 overflow: auto;
             }
 
-            .title {
+            header .title {
                 text-align: center;
                 color: white;
                 font-size: 64px;
                 margin-top: 128px;
                 margin-bottom: 0px;
-                text-shadow: 0px 0px 30px rgb(0,0,0,1);
+                text-shadow: 0px 0px 10px rgb(0,0,0,1), 0px 0px 40px rgb(0,0,0,1);
             }
 
             header .description {
@@ -32,7 +59,7 @@
                 margin-top: 0px;
                 margin-bottom: 80px;
                 max-width: 460px;
-                text-shadow: 0px 0px 15px rgb(0,0,0,1);
+                text-shadow: 0px 0px 15px rgb(0,0,0,1), 0px 0px 5px rgb(0,0,0,1);
             }
 
             header .container {
@@ -66,32 +93,34 @@
                 color: rgb(255, 255, 255);
             }
 
-            .imageContainer {
-                height: 600px;
-                overflow: hidden;
-                background-color: blueviolet;
-            }
-
             .content {
-                max-width: 1200px;
+                max-width: var(--content-width);
                 margin: auto;
             }
 
             .text {
+                max-width: var(--text-width);
+                margin: auto;
+                margin-top:var(--gutter);
+                margin-bottom:var(--gutter);
+                padding-left: var(--gutter);
+                padding-right: var(--gutter);
+            }
+
+            h2.text {
+                margin-top: 1em;
+            }
+
+            p.text {
                 font-size: 18px;
                 line-height: 1.4em;
-                max-width: 664px;
-                margin: auto;
-                margin-top:16px;
-                margin-bottom:16px;
-                padding-left: 16px;
-                padding-right: 16px;
             }
 
             .banner {
-                /* min-height: 400px; */
                 overflow:auto;
                 position: relative;
+                background-color: rgba(0, 0, 0, 0.1);
+                border-radius: var(--banner-border-rad);
             }
 
             .banner .background-image {
@@ -104,25 +133,19 @@
                 z-index: -1;
 
                 transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
-                transition-duration: 1s;
+                transition-duration: 2s;
 
-                border-radius: 8px;
+                border-radius: var(--banner-border-rad);
             }
 
-            @media screen and (max-width: 1200px) {
+            @media screen and (max-width: 1000px) {
                 .banner .background-image {
                     border-radius: 0px;
                 }
-            }
 
-            .banner h2 {
-                text-align: center;
-                color: white;
-                font-weight: normal;
-                font-size: 160px;
-                text-shadow: 0px 0px 30px rgb(0,0,0,1);
-                margin-top: 48px;
-                margin-bottom: 16px;
+                .banner {
+                    border-radius: 0px;
+                }
             }
 
             .detail {
@@ -141,10 +164,10 @@
                 overflow: visible;
             }
 
-            @media screen and (max-width: 696px) {
+            @media screen and (max-width: var(--text-width-and-gutter)) {
                 .resource .hanging {
-                    padding-left: 16px;
-                    padding-right: 16px;
+                    padding-left: var(--gutter);
+                    padding-right: var(--gutter);
                 }
             }
 
@@ -167,23 +190,23 @@
                 text-align: center;
                 font-weight: bold;
                 color: white;
-                font-size: 60px;
-                text-shadow: 0px 0px 15px rgb(0,0,0,1);
+                font-size: 48px;
+                text-shadow: 0px 0px 10px rgb(0,0,0,1), 0px 0px 40px rgb(0,0,0,1);
             }
 
             .greyed-out .background-image {
-                filter: grayscale() brightness(0.5);
+                filter: grayscale() brightness(0.6);
             }
 
             .year {
                 display: block;
-                font-size: 48px;
+                font-size: 32px;
                 font-weight: bolder;
                 text-align: center;
                 margin: auto;
                 margin-bottom: 0px;
                 margin-top: 0px;
-                width: 140px;
+                width: 100px;
                 border: 4px solid black;
                 border-radius: 8px;
             }
@@ -221,16 +244,15 @@
 
         </style>
         <script>
-            var elements = document.getElementsByClassName("resource");
+            const elements = document.getElementsByClassName("resource");
             window.addEventListener("scroll", function() {
-                // console.log(window.scrollY > (element.offsetTop + element.offsetHeight))
                 for (element of elements) {
-                    console.log(element)
-                    if (window.scrollY > (element.offsetTop + element.offsetHeight) - (window.innerHeight / 2) - 64) {
+                    let middleOffset = (element.offsetTop + element.offsetHeight / 2)
+                    if (window.scrollY > middleOffset - (window.innerHeight / 2)) {
                         if (element.classList && !element.classList.contains("greyed-out")) {
                             element.classList.toggle("greyed-out")
                         }
-                    } else {
+                    } else if (window.scrollY < (element.offsetTop) - window.innerHeight) {
                         if (element.classList && element.classList.contains("greyed-out")) {
                             element.classList.toggle("greyed-out")
                         }
@@ -289,15 +311,23 @@
                     <div class="spacer"></div>
                     {{!-- <div class="bulb"></div> --}}
                 {{/if}}
+                {{#if isHeader}}
+                    <h2 class="text">
+                        {{{text}}}
+                    </h2>
+                {{/if}}
                 {{#if isParagraph}}
                     <p class="text">
                         {{{text}}}
                     </p>
                 {{/if}}
+                {{#if isBulb}}
+                    <div class="bulb"></div>
+                {{/if}}
             {{/each}}
-            <div class="bulb dot"></div>
-            <div class="bulb dot"></div>
-            <div class="bulb bottom"></div>
         </div>
+        <footer>
+            <p>All images from <a href="https://commons.wikimedia.org">Wikimedia Commons</a> &middot; Created by <a href="/">Julian Fortune</a></p>
+        </footer>
     </body>
 </html>

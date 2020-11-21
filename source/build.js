@@ -3,6 +3,7 @@
 // Created November 18, 2020
 //
 
+const { time } = require('console');
 var fs = require('fs');
 var Handlebars = require("handlebars");
 
@@ -20,6 +21,11 @@ function createSpacer() {
             isSpacer: true}
 }
 
+function createBulb() {
+    return {type: "bulb",
+            isBulb: true}
+}
+
 function createYearArray(start, stop, step) {
     roundedStart = Math.floor(start/step) * step
 
@@ -28,6 +34,21 @@ function createYearArray(start, stop, step) {
         years.push(year)
     }
     return years
+}
+
+// Add boolean properties to the events based on the `type`
+// property to make templating easier
+function classify(dataItems) {
+    return dataItems.map((item) => {
+        item["isResource"] = item["type"] && item["type"].toLowerCase() === "resource"
+        item["isParagraph"] = item["type"] && item.type.toLowerCase() === "paragraph"
+        item["isHeader"] = item["type"] && item.type.toLowerCase() === "header"
+        item["isYear"] = item["type"] && item.type.toLowerCase() === "year"
+
+        item["isText"] = item["isParagraph"] || item["isHeader"]
+
+        return item
+    })
 }
 
 let dataFileName = "source/data.json"
@@ -45,24 +66,29 @@ for (year of createYearArray(2021, 2200, 5)) {
 let dataFile = fs.readFileSync(dataFileName)
 let json = JSON.parse(dataFile)
 
+// Sort into events and notes based on if a `year` is set
+userEvents = []
+userNotes  = []
+
+for (item of json["events"]) {
+    if ("year" in item) {
+        userEvents.push(item)
+    } else {
+        userNotes.push(item)
+    }
+}
+
 // Put the user-created events at the end of the list so they
 // are sorted after the year markers
-events = events.concat(json["events"])
+events = events.concat(userEvents)
 
 // Sort the events by the year
 events = events.sort((a, b) => {
     return Number(a["year"]) - Number(b["year"])
 })
 
-// Add boolean properties to the events based on the `type`
-// property to make templating easier
-events = events.map((item) => {
-    item["isResource"] = item["type"] && item["type"].toLowerCase() === "resource"
-    item["isParagraph"] = item["type"] && item.type.toLowerCase() === "paragraph"
-    item["isYear"] = item["type"] && item.type.toLowerCase() === "year"
-
-    return item
-})
+events = classify(events)
+userNotes = classify(userNotes)
 
 timeline = []
 
@@ -70,7 +96,7 @@ timeline = []
 events.forEach((item, index, array) => {
     if (index > 0) {
         let priorItem = array[index - 1]
-        if (item.isParagraph && !priorItem.isYear && !priorItem.isParagraph) {
+        if (item.isText && !priorItem.isYear && !priorItem.isText) {
             timeline.push(createSpacer())
         }
         if (item.isYear && !priorItem.isYear) {
@@ -83,9 +109,24 @@ events.forEach((item, index, array) => {
     if (item.isYear) {
         timeline.push(createSeparator())
     }
-    if (item.isParagraph && index < events.length && array[index + 1].isResource) {
-        timeline.push(createSpacer())
+
+    if (index < events.length) {
+        if (item.isText && array[index + 1].isResource) {
+            timeline.push(createSpacer())
+        }
+        if (item.isText && array[index + 1].isResource) {
+            timeline.push(createSpacer())
+        }
     }
+})
+
+// End the timeline
+timeline.push(createBulb())
+timeline.push(createSpacer())
+
+// Any paragraphs/header without years go here in order found in dataFile
+userNotes.forEach((item, index, array) => {
+    timeline.push(item)
 })
 
 // Put the timeline back into the JSON data
