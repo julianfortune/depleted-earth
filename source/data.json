@@ -18,7 +18,7 @@
         {
             "type": "paragraph",
             "year": "2025",
-            "text": "Despite the apparent abundance of water, fresh water is primarily a non-renewable resource. Fresh water can originate from surface sources, like lakes, rivers, and ice, but more than half of americans get their fresh water from <a href=\"https://en.wikipedia.org/wiki/Resource_depletion#Groundwater\">ground water</a> [<a href=\"https://www.usgs.gov/special-topic/water-science-school/science/groundwater-decline-and-depletion\">1</a>]. At most 5.6% of our ground water can be replenished within 50 years after extraction. Although the total ground water in the earth could cover the entire surface of the Earth to a depth of 18 meters, in many areas people are already drawing on water that is thousands of years old—or in some areas of Egypt, millions of years old [<a href=\"https://www.cbc.ca/news/technology/groundwater-study-1.3318137\">2</a>,<a href=\"https://doi.org/10.1038/ngeo2590\">3</a>]."
+            "text": "Despite the apparent abundance of water, fresh water is primarily a non-renewable resource. Fresh water can originate from surface sources, like lakes, rivers, and ice, but more than half of americans get their fresh water from <a href=\"https://en.wikipedia.org/wiki/Resource_depletion#Groundwater\">ground water</a> [<a href=\"https://www.usgs.gov/special-topic/water-science-school/science/groundwater-decline-and-depletion\">1</a>]. At most 5.6% of our ground water can be replenished within 50 years after extraction. Although the total ground water in the Earth could cover the entire surface of the Earth to a depth of 18 meters, in many areas people are already drawing on water that is thousands of years old—or in some areas of Egypt, millions of years old [<a href=\"https://www.cbc.ca/news/technology/groundwater-study-1.3318137\">2</a>,<a href=\"https://doi.org/10.1038/ngeo2590\">3</a>]."
         },
         {
             "type": "resource",
@@ -215,7 +215,5 @@
             "type": "paragraph",
             "text": "The only way to address our dwindling resources and avert climate catastrophes is to switch to a <a href=\"https://en.wikipedia.org/wiki/Circular_economy\"> Circular Economy</a> where there are no inputs or outputs, and pollution is minimized. Ellen MacArthur provides an excellent introduction to the subject in her <a href=\"https://www.ted.com/talks/dame_ellen_macarthur_the_surprising_thing_i_learned_sailing_solo_around_the_world\">TED talk</a> on her  personal journey to arriving at the Circular Economy."
         }
-
-
     ]
 }
