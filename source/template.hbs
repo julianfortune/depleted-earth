@@ -161,7 +161,7 @@
 
             .detail {
                 font-weight: light;
-                color: #CCC;
+                color: #AAA;
                 font-size: 8px;
             }
 
@@ -188,7 +188,7 @@
             }
 
             .detail a {
-                color: #CCC;
+                color: #AAA;
                 transition-property: color;
                 transition-duration: 0.5s;
             }
@@ -200,11 +200,23 @@
             .banner .description {
                 text-align: center;
                 font-weight: bold;
-                padding-left: 15px;
-                padding-right: 15px;
+                padding-left: 24px;
+                padding-right: 24px;
+                /* margin-bottom: 24px; */
                 color: white;
                 font-size: 48px;
                 text-shadow: 0px 0px 10px rgb(0,0,0,1), 0px 0px 40px rgb(0,0,0,1);
+            }
+
+            .banner .date {
+                display: block;
+                color: white;
+                font-weight: light;
+                margin-bottom: 18px;
+                font-size: 24px;
+                text-align: center;
+
+                text-shadow: 0px 0px 5px rgb(0,0,0,1), 0px 0px 10px rgb(0,0,0,1);
             }
 
             .greyed-out .background-image {
@@ -299,6 +311,7 @@
                                 <p class="description">
                                     {{description}}
                                 </p>
+                                {{!-- <p class="date">{{year}}</p> --}}
                             {{/if}}
                         </div>
                         {{#if source}}

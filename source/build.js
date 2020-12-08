@@ -58,7 +58,7 @@ console.log(`Building from '${dataFileName}' ...`)
 events = []
 
 // Initialize a list of year marker events in the right range
-for (year of createYearArray(2021, 2100, 1)) {
+for (year of createYearArray(2021, 2100, 5)) {
     events.push(createYear(year))
 }
 

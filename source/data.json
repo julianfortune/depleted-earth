@@ -11,12 +11,14 @@
             "attribution": "<a href=\"https://commons.wikimedia.org/wiki/File:TN_display_closeup_300X.jpg\">Akpch</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>, via Wikimedia Commons"
         },
         {
-            "type": "resource",
-            "year":"2024",
-            "description": "Current indium reserves are depleted.",
-            "source": "http://www.bbc.com/future/bespoke/BBCF_infoData_stock_check.pdf",
-            "imageURL": "https://upload.wikimedia.org/wikipedia/commons/7/77/TN_display_closeup_300X.jpg",
-            "attribution": "<a href=\"https://commons.wikimedia.org/wiki/File:TN_display_closeup_300X.jpg\">Akpch</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>, via Wikimedia Commons"
+            "type": "header",
+            "year": "2025",
+            "text": "The Finite Nature of Water"
+        },
+        {
+            "type": "paragraph",
+            "year": "2025",
+            "text": "Despite the apparent abundance of water, fresh water is primarily a non-renewable resource. Fresh water can originate from surface sources, like lakes, rivers, and ice, but more than half of americans get their fresh water from <a href=\"https://en.wikipedia.org/wiki/Resource_depletion#Groundwater\">ground water</a> [<a href=\"https://www.usgs.gov/special-topic/water-science-school/science/groundwater-decline-and-depletion\">1</a>]. At most 5.6% of our ground water can be replenished within 50 years after extraction. Although the total ground water in the earth could cover the entire surface of the Earth to a depth of 18 meters, in many areas people are already drawing on water that is thousands of years old—or in some areas of Egypt, millions of years old [<a href=\"https://www.cbc.ca/news/technology/groundwater-study-1.3318137\">2</a>,<a href=\"https://doi.org/10.1038/ngeo2590\">3</a>]."
         },
         {
             "type": "resource",
@@ -27,12 +29,42 @@
             "attribution": "<a href=\"https://commons.wikimedia.org/wiki/File:Silver_crystal.jpg\">Alchemist-hp (talk) (www.pse-mendelejew.de)</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/de/deed.en\">CC BY-SA 3.0 DE</a>, via Wikimedia Commons"
         },
         {
+            "type": "header",
+            "year": "2029",
+            "text": "Reserves"
+        },
+        {
+            "type": "paragraph",
+            "year": "2029",
+            "text": "\"Reserves\" are collections resources that we have identified within the Earth that we can extract at some point—but haven't yet. Estimates relating to reserves fluctuate as economic forces, technological chanages, and new resource discoveries alter what we know about resource availability and extraction feasibility. Nevertheless, they are most certainly <a href=\"https://en.wikipedia.org/wiki/Abundance_of_elements_in_Earth%27s_crust\">finite</a>."
+        },
+        {
             "type": "resource",
             "year":"2040",
             "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/01_-_Set_of_Energizer_Batteries.jpg/1280px-01_-_Set_of_Energizer_Batteries.jpg",
             "attribution": "<a href=\"https://commons.wikimedia.org/wiki/File:01_-_Set_of_Energizer_Batteries.jpg\">Asim18</a>, <a href=\"https://creativecommons.org/licenses/by/3.0\">CC BY 3.0</a>, via Wikimedia Commons",
             "description": "Antimony resources are exhausted.",
             "source": "https://doi.org/10.1016/j.resourpol.2016.04.012"
+        },
+        {
+            "type": "header",
+            "year": "2040",
+            "text": "Antimony"
+        },
+        {
+            "type": "paragraph",
+            "year": "2040",
+            "text": "Antimony is used in flame-retardation and in the production of batteries."
+        },
+        {
+            "type": "header",
+            "year": "2040",
+            "text": "Resource Exhaustion"
+        },
+        {
+            "type": "paragraph",
+            "year": "2040",
+            "text": "Although we may discover new reserves of a resource over time, the economic and practical feasibility of extracting the resources will eventually be insurmountable, and—although there will still be an abundance of the element in the Earth's crust—the resource becomes \"exhausted\" in all practical senses."
         },
         {
             "type": "resource",
@@ -55,7 +87,7 @@
             "year":"2050",
             "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Diceros_bicornis_-_profile_-_Etosha_2014.jpg/1024px-Diceros_bicornis_-_profile_-_Etosha_2014.jpg",
             "attribution": "<a href=\"https://commons.wikimedia.org/wiki/File:Diceros_bicornis_-_profile_-_Etosha_2014.jpg\">Yathin S Krishnappa</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>, via Wikimedia Commons",
-            "description": "15% of species are destined to extinction as a result of human-caused climate change.",
+            "description": "15% of species are destined to extinction as a result of climate change.",
             "source": "https://www.nature.com/articles/nature02121"
         },
         {
@@ -109,11 +141,39 @@
         },
         {
             "type": "resource",
+            "year":"2085",
+            "description": "Current indium reserves are depleted.",
+            "source": "https://www.nrel.gov/docs/fy16osti/62409.pdf",
+            "imageURL": "https://upload.wikimedia.org/wikipedia/commons/7/77/TN_display_closeup_300X.jpg",
+            "attribution": "<a href=\"https://commons.wikimedia.org/wiki/File:TN_display_closeup_300X.jpg\">Akpch</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>, via Wikimedia Commons"
+        },
+        {
+            "type": "resource",
             "year":"2088",
             "description": "Current phosphorus reserves are depleted.",
             "source": "http://www.bbc.com/future/bespoke/BBCF_infoData_stock_check.pdf",
             "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Phosphate_Mine_Panorama.jpg/1280px-Phosphate_Mine_Panorama.jpg",
             "attribution": "<a href=\"https://commons.wikimedia.org/wiki/File:Phosphate_Mine_Panorama.jpg\">Jason Parker-Burlingham</a>, <a href=\"https://creativecommons.org/licenses/by/2.0\">CC BY 2.0</a>, via Wikimedia Commons"
+        },
+        {
+            "type": "header",
+            "year": "2088",
+            "text": "An Essential Resource"
+        },
+        {
+            "type": "paragraph",
+            "year": "2088",
+            "text": "<em>\"Then there is the impending shortage of two fertilizers: phosphorus (phosphate) and potassium (potash). These two elements cannot be made, cannot be substituted, are necessary to grow all life forms, and are mined and depleted. It’s a scary set of statements. Former Soviet states and Canada have more than 70% of the potash. Morocco has 85% of all high-grade phosphates. It is the most important quasi-monopoly in economic history.\"</em>"
+        },
+        {
+            "type": "paragraph",
+            "year": "2088",
+            "text": "<em>\"What happens when these fertilizers run out is a question I can’t get satisfactorily answered and, believe me, I have tried. There seems to be only one conclusion: their use must be drastically reduced in the next 20–40 years or we will begin to starve.\"</em>"
+        },
+        {
+            "type": "paragraph",
+            "year": "2088",
+            "text": "Excerpt from <em><a href=\"\">Be persuasive. Be brave. Be arrested (if necessary)</a></em> by Jeremy Grantham"
         },
         {
             "type": "resource",
@@ -146,6 +206,16 @@
             "attribution": "<a href=\"https://commons.wikimedia.org/wiki/File:Coral_Outcrop_Flynn_Reef.jpg\">Toby Hudson</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>, via Wikimedia Commons",
             "description": "90% of Coral Reefs are gone.",
             "source": "https://agu.confex.com/agu/osm20/meetingapp.cgi/Paper/649436/"
+        },
+        {
+            "type": "header",
+            "text": "What can we do?"
+        },
+        {
+            "type": "paragraph",
+            "text": "The only way to address our dwindling resources and avert climate catastrophes is to switch to a <a href=\"https://en.wikipedia.org/wiki/Circular_economy\"> Circular Economy</a> where there are no inputs or outputs, and pollution is minimized. Ellen MacArthur provides an excellent introduction to the subject in her <a href=\"https://www.ted.com/talks/dame_ellen_macarthur_the_surprising_thing_i_learned_sailing_solo_around_the_world\">TED talk</a> on her  personal journey to arriving at the Circular Economy."
         }
+
+
     ]
 }
