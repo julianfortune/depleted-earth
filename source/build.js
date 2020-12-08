@@ -58,7 +58,7 @@ console.log(`Building from '${dataFileName}' ...`)
 events = []
 
 // Initialize a list of year marker events in the right range
-for (year of createYearArray(2021, 2200, 5)) {
+for (year of createYearArray(2021, 2100, 1)) {
     events.push(createYear(year))
 }
 
@@ -110,12 +110,20 @@ events.forEach((item, index, array) => {
         timeline.push(createSeparator())
     }
 
-    if (index < events.length) {
+    if (index < (events.length - 1)) {
         if (item.isText && array[index + 1].isResource) {
             timeline.push(createSpacer())
         }
         if (item.isText && array[index + 1].isResource) {
             timeline.push(createSpacer())
+        }
+        if (item.isResource && array[index + 1].isResource) {
+            timeline.push(createSeparator())
+        }
+    } else {
+        // If the final thing isn't a year push a space
+        if (!item.isYear) {
+            timeline.push(createSeparator())
         }
     }
 })
